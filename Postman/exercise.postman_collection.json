@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "5b5733a4-23f2-4d3b-8d41-5af6b06b26e6",
+		"name": "exercise",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": {\r\n    \"first\": \"Harold\",\r\n    \"middle\": \"Francis\",\r\n    \"last\": \"Gilkey\"\r\n  },\r\n  \"address\": {\r\n    \"street\": \"8360 High Autumn Row\",\r\n    \"city\": \"Cannon\",\r\n    \"state\": \"Delaware\",\r\n    \"zip\": \"19797\"\r\n  },\r\n  \"phone\": [\r\n    {\r\n      \"number\": \"302-611-9148\",\r\n      \"type\": \"home\"\r\n    },\r\n    {\r\n      \"number\": \"302-532-9427\",\r\n      \"type\": \"mobile\"\r\n    }\r\n  ],\r\n  \"email\": \"harold.gilkey@yahoo.com\"\r\n}\r\n\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/contacts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/contacts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/contacts/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"contacts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/contacts/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"contacts",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": {\r\n    \"first\": \"John\",\r\n    \"middle\": \"Harrison\",\r\n    \"last\": \"Ford\"\r\n  },\r\n  \"address\": {\r\n    \"street\": \"8360 High Autumn Row\",\r\n    \"city\": \"Cannon\",\r\n    \"state\": \"Delaware\",\r\n    \"zip\": \"33333\"\r\n  },\r\n  \"phone\": [\r\n    {\r\n      \"number\": \"302-611-9148\",\r\n      \"type\": \"home\"\r\n    },\r\n    {\r\n      \"number\": \"302-532-9427\",\r\n      \"type\": \"mobile\"\r\n    },\r\n        {\r\n      \"number\": \"302-532-9555\",\r\n      \"type\": \"work\"\r\n    }\r\n  ],\r\n  \"email\": \"harold.gilkey@yahoo.com\"\r\n}\r\n\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/contacts/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"contacts",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
